@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fakultas Kehutanan - Universitas Seruni</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #2ecc71;
+      --accent: #27ae60;
+      --bg: #f6fff9;
+      --text: #2c3e50;
+      --card: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      background-color: var(--card);
+      padding: 40px 60px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2em;
+      color: var(--primary);
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 30px;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    h2 {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      border-left: 5px solid var(--primary);
+      padding-left: 15px;
+    }
+
+    h3 {
+      margin-top: 30px;
+      color: var(--accent);
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 15px;
+    }
+
+    ul li {
+      background-color: var(--card);
+      padding: 16px 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .facilities li::before {
+      content: '🌲';
+      margin-right: 10px;
+    }
+
+    footer {
+      background-color: var(--text);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 80px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Fakultas Kehutanan - Universitas Seruni</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Profil Fakultas</h2>
+      <p>Fakultas Kehutanan Universitas Seruni berkomitmen untuk mencetak lulusan yang mampu menjaga kelestarian hutan Indonesia melalui pendidikan, penelitian, dan pengabdian masyarakat. Fokus utama fakultas ini adalah pengelolaan sumber daya hutan yang berkelanjutan berbasis teknologi hijau.</p>
+    </section>
+
+    <section>
+      <h2>Program Studi</h2>
+      <h3>Sarjana (S1)</h3>
+      <ul>
+        <li>Kehutanan</li>
+        <li>Manajemen Hutan</li>
+        <li>Hasil Hutan</li>
+        <li>Konservasi Sumberdaya Hutan dan Ekowisata</li>
+        <li>Silvikultur</li>
+      </ul>
+
+      <h3>Magister (S2)</h3>
+      <ul>
+        <li>Magister Kehutanan</li>
+        <li>Magister Ilmu Pengelolaan Hutan</li>
+        <li>Magister Ilmu dan Teknologi Hasil Hutan</li>
+        <li>Magister Konservasi Biodiversitas Tropika</li>
+        <li>Magister Manajemen Ekowisata dan Jasa Lingkungan</li>
+      </ul>
+
+      <h3>Doktor (S3)</h3>
+      <ul>
+        <li>Doktor Kehutanan</li>
+      </ul>
+    </section>
+
+    <section class="facilities">
+      <h2>Fasilitas Unggulan</h2>
+      <ul>
+        <li>Kebun Percobaan Hutan Tropis</li>
+        <li>Laboratorium Bioteknologi Kehutanan</li>
+        <li>Ruang GIS dan Pemetaan Hutan</li>
+        <li>Arboretum Pendidikan</li>
+        <li>Pusat Kajian Konservasi</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Kontak Fakultas</h2>
+      <p>Email: kehutanan@seruni.ac.id<br />
+      Telepon: (021) 8899-1122<br />
+      Lokasi: Gedung Kehutanan, Kampus Selatan Universitas Seruni</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Fakultas Kehutanan - Universitas Seruni. Seluruh hak cipta dilindungi.
+  </footer>
+</body>
+</html>

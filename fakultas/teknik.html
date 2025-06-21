@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fakultas Teknik - Universitas Seruni</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --accent: #10b981;
+      --bg: #f8fafc;
+      --text: #111827;
+      --card: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      background-color: var(--card);
+      padding: 40px 60px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.4em;
+      color: var(--primary);
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 30px;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    h2 {
+      font-size: 1.9em;
+      margin-bottom: 20px;
+      border-left: 6px solid var(--accent);
+      padding-left: 15px;
+    }
+
+    h3 {
+      margin-top: 30px;
+      color: var(--accent);
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 16px;
+    }
+
+    ul li {
+      background-color: var(--card);
+      padding: 18px 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .facilities li::before {
+      content: '🏗️';
+      margin-right: 10px;
+    }
+
+    footer {
+      background-color: var(--text);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 80px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Fakultas Teknik - Universitas Seruni</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Profil Fakultas</h2>
+      <p>Fakultas Teknik Universitas Seruni merupakan salah satu fakultas unggulan dengan fokus pada pengembangan teknologi mutakhir dan inovasi teknik. Terletak di Kampus Utama, fakultas ini menawarkan berbagai program studi dari jenjang sarjana hingga doktoral di berbagai bidang teknik modern.</p>
+    </section>
+
+    <section>
+      <h2>Program Studi</h2>
+
+      <h3>Program Sarjana (S1)</h3>
+      <ul>
+        <li>Teknik Sipil</li>
+        <li>Teknik Mesin</li>
+        <li>Teknik Elektro</li>
+        <li>Teknik Industri</li>
+        <li>Teknik Kimia</li>
+        <li>Teknik Lingkungan</li>
+        <li>Teknik Geodesi</li>
+        <li>Teknik Geologi</li>
+        <li>Teknik Perminyakan</li>
+        <li>Teknik Pertambangan</li>
+        <li>Teknik Metalurgi</li>
+        <li>Teknik Dirgantara</li>
+        <li>Teknik Nuklir</li>
+        <li>Teknik Robotika</li>
+        <li>Teknik Otomotif</li>
+        <li>Teknik Telekomunikasi</li>
+        <li>Teknik Energi Terbarukan</li>
+        <li>Teknik Fisika</li>
+        <li>Teknik Material</li>
+        <li>Teknik Biomedis</li>
+        <li>Teknik Kelautan</li>
+        <li>Teknik Geofisika</li>
+        <li>Perencanaan Wilayah dan Kota</li>
+        <li>Teknik Perkapalan</li>
+        <li>Arsitektur</li>
+        <li>Arsitektur Interior</li>
+        <li>Teknik Informatika</li>
+      </ul>
+
+      <h3>Program Magister (S2)</h3>
+      <ul>
+        <li>Magister Teknik Sipil</li>
+        <li>Magister Teknik Mesin</li>
+        <li>Magister Teknik Elektro</li>
+        <li>Magister Teknik Industri</li>
+        <li>Magister Teknik Lingkungan</li>
+        <li>Magister Teknik Geologi</li>
+        <li>Magister Teknik Kimia</li>
+        <li>Magister Teknik Dirgantara</li>
+        <li>Magister Teknik Energi</li>
+        <li>Magister Rekayasa Sistem</li>
+        <li>Magister Teknik Telekomunikasi</li>
+        <li>Magister Teknologi dan Inovasi</li>
+        <li>Magister Perencanaan Wilayah dan Kota</li>
+        <li>Magister Teknik Fisika</li>
+        <li>Magister Teknik Pertambangan dan Perminyakan</li>
+        <li>Magister Arsitektur</li>
+        <li>Magister Teknik Biomedis</li>
+      </ul>
+
+      <h3>Program Doktor (S3)</h3>
+      <ul>
+        <li>Doktor Teknik Sipil</li>
+        <li>Doktor Teknik Mesin</li>
+        <li>Doktor Teknik Elektro</li>
+        <li>Doktor Teknik Industri</li>
+        <li>Doktor Teknik Lingkungan</li>
+        <li>Doktor Rekayasa dan Teknologi Berkelanjutan</li>
+      </ul>
+
+      <h3>Program Profesi</h3>
+      <ul>
+        <li>Program Profesi Insinyur</li>
+        <li>Program Profesi Arsitek</li>
+        <li>Program Sertifikasi Keahlian Teknik</li>
+      </ul>
+    </section>
+
+    <section class="facilities">
+      <h2>Fasilitas Unggulan</h2>
+      <ul>
+        <li>Laboratorium Material dan Struktur</li>
+        <li>Laboratorium Mekatronika dan Robotika</li>
+        <li>Pusat Teknologi Energi Baru</li>
+        <li>Simulasi Teknik dan Modeling 3D</li>
+        <li>Studio Desain Infrastruktur Cerdas</li>
+        <li>Kolaborasi Industri dan Engineering Hub</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Kontak</h2>
+      <p>Email: teknik@seruni.ac.id<br />
+      Telepon: (021) 7755-8877<br />
+      Lokasi: Gedung Teknik, Kampus Utama Universitas Seruni</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Fakultas Teknik - Universitas Seruni. Seluruh hak cipta dilindungi.
+  </footer>
+</body>
+</html>
