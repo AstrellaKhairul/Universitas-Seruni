@@ -93,24 +93,33 @@
         footer h4 {
             margin-bottom: 10px;
         }
-    </style>
+   </style>
 </head>
 <body>
-<nav class="navbar">
-    <div class="container">
-      <div class="logo">Indira Seruni</div>
-      <div class="menu-toggle" id="mobile-menu">
-        <img src="assets/icons/menu.svg" alt="Menu" />
-      </div>
-      <div class="nav-links" id="nav-links">
-               <a href="#tentang">Tentang</a>
-               <a href="#berita">Berita</a>               
-               <a href="#fakultas">Fakultas</a>
-               <a href="#kontak">Kontak</a>
-               <a href="#lokasi">Lokasi</a>
-      </div>
+  <header>
+    <h1>Universitas Seruni</h1>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-  </nav>
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#berita">Berita</a></li>
+        <li><a href="#fakultas">Fakultas</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+        <li><a href="#lokasi">Lokasi</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav-menu');
+      nav.classList.toggle('active');
+    }
+  </script>
 
 
     <div class="hero">
