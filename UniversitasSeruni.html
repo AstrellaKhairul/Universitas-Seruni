@@ -187,5 +187,16 @@
     <footer>
         &copy; 2025 Universitas Seruni. Semua Hak Dilindungi.
     </footer>
+	    
+<script>
+    // Toggle Hamburger Menu
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      menuToggle.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
