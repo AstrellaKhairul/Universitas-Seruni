@@ -23,9 +23,10 @@
 
   header {
     background-color: var(--card);
-    padding: 40px 60px;
+    padding: 40px 40px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     width: 100%;
+    box-sizing: border-box;
   }
 
   header h1 {
@@ -36,14 +37,16 @@
 
   main {
     width: 100%;
-    margin: 50px 0;
-    padding: 0 60px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
   }
 
   section {
     margin-bottom: 60px;
     width: 100%;
+    padding: 40px 20px;
+    box-sizing: border-box;
   }
 
   h2 {
@@ -60,10 +63,11 @@
 
   ul {
     list-style: none;
-    padding-left: 0;
+    padding: 0;
+    margin: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
     width: 100%;
   }
 
@@ -85,16 +89,22 @@
     color: white;
     text-align: center;
     padding: 40px 20px;
-    margin-top: 80px;
     width: 100%;
+    margin: 0;
+    box-sizing: border-box;
   }
 
-  /* Pastikan semua elemen ikut full width */
-  body, header, main, section, footer {
+  /* pastikan semua elemen benar-benar full */
+  html, body, header, main, section, footer, ul, li {
     max-width: 100%;
   }
-</style>
 
+  /* hapus ruang putih di kanan-kiri layar */
+  * {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  </style>
 </head>
 <body>
   <header>
