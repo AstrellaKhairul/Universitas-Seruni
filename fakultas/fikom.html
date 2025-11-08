@@ -14,17 +14,24 @@
       --card: #ffffff;
     }
 
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+
+    body {
       font-family: 'Inter', sans-serif;
       background-color: var(--bg);
       color: var(--text);
+      overflow-x: hidden;
     }
 
     header {
       background-color: var(--card);
       padding: 40px 60px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      width: 100%;
     }
 
     header h1 {
@@ -34,12 +41,14 @@
     }
 
     main {
-      max-width: 1200px;
-      margin: 50px auto;
-      padding: 0 30px;
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      padding: 60px 60px;
     }
 
     section {
+      width: 100%;
       margin-bottom: 60px;
     }
 
@@ -80,7 +89,14 @@
       color: white;
       text-align: center;
       padding: 40px 20px;
-      margin-top: 80px;
+      width: 100%;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header, main {
+        padding: 30px 20px;
+      }
     }
   </style>
 </head>
