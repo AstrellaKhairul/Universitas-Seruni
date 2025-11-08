@@ -14,22 +14,29 @@
       --card: #ffffff;
     }
 
-    body {
+   * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+
+    body {
       font-family: 'Inter', sans-serif;
       background-color: var(--bg);
       color: var(--text);
+      overflow-x: hidden;
     }
 
     header {
       background-color: var(--card);
       padding: 40px 60px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      width: 100%;
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.4em;
+      font-size: 2.2em;
       color: var(--primary);
     }
 
