@@ -6,89 +6,103 @@
   <title>Fakultas Ilmu Komputer - Universitas Seruni</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
-    :root {
-      --primary: #2c3e50;
-      --accent: #3498db;
-      --bg: #f8f9fa;
-      --text: #2c3e50;
-      --card: #ffffff;
+  :root {
+    --primary: #2c3e50;
+    --accent: #3498db;
+    --bg: #f8f9fa;
+    --text: #2c3e50;
+    --card: #ffffff;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  header {
+    background-color: var(--card);
+    padding: 40px 5vw; /* responsif kiri-kanan */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    width: 100%;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 2.2em;
+    color: var(--primary);
+  }
+
+  main {
+    width: 100%;
+    padding: 60px 5vw; /* full tapi tetap ada ruang aman kiri-kanan */
+  }
+
+  section {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+
+  h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--primary);
+    padding-left: 15px;
+  }
+
+  h3 {
+    margin-top: 30px;
+    color: var(--accent);
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+  }
+
+  ul li {
+    background-color: var(--card);
+    padding: 16px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    width: 100%;
+  }
+
+  .facilities li::before {
+    content: '💻';
+    margin-right: 10px;
+  }
+
+  footer {
+    background-color: var(--text);
+    color: white;
+    text-align: center;
+    padding: 50px 5vw;
+    margin-top: 80px;
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    header, main, footer {
+      padding: 30px 20px;
     }
-
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-    }
-
-    header {
-      background-color: var(--card);
-      padding: 40px 60px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.2em;
-      color: var(--primary);
-    }
-
-   main {
-  padding: 60px 30px;
-  width: 100%;
-  max-width: none;
-  margin: 0;
-}
-
-section {
-  width: 100%;
-}
-
-
-    section {
-      margin-bottom: 60px;
-    }
-
     h2 {
-      font-size: 1.8em;
-      margin-bottom: 20px;
-      border-left: 5px solid var(--primary);
-      padding-left: 15px;
+      font-size: 1.5em;
     }
+  }
+</style>
 
-    h3 {
-      margin-top: 30px;
-      color: var(--accent);
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 15px;
-    }
-
-    ul li {
-      background-color: var(--card);
-      padding: 16px 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    }
-
-    .facilities li::before {
-      content: '💻';
-      margin-right: 10px;
-    }
-
-    footer {
-      background-color: var(--text);
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
-      margin-top: 80px;
-    }
-  </style>
 </head>
 <body>
   <header>
