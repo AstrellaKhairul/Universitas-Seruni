@@ -33,20 +33,23 @@
       color: var(--primary);
     }
 
+    /* Bagian utama dibuat full width */
     main {
-      max-width: 1200px;
-      margin: 50px auto;
-      padding: 0 30px;
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      padding: 60px 60px;
     }
 
     section {
       margin-bottom: 60px;
+      width: 100%;
     }
 
     h2 {
-      font-size: 1.9em;
+      font-size: 1.8em;
       margin-bottom: 20px;
-      border-left: 6px solid var(--accent);
+      border-left: 5px solid var(--primary);
       padding-left: 15px;
     }
 
@@ -59,19 +62,20 @@
       list-style: none;
       padding-left: 0;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 15px;
+      width: 100%;
     }
 
     ul li {
       background-color: var(--card);
-      padding: 18px 20px;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      padding: 16px 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     }
 
     .facilities li::before {
-      content: '🏗️';
+      content: '🧠';
       margin-right: 10px;
     }
 
@@ -79,8 +83,22 @@
       background-color: var(--text);
       color: white;
       text-align: center;
-      padding: 40px 20px;
+      padding: 50px 30px;
       margin-top: 80px;
+      width: 100%;
+    }
+
+    /* Responsif di layar kecil */
+    @media (max-width: 768px) {
+      header {
+        padding: 25px 30px;
+      }
+      main {
+        padding: 40px 25px;
+      }
+      ul {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
