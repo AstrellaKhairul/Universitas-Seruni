@@ -14,11 +14,21 @@
       --card: #ffffff;
     }
 
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
       background-color: var(--bg);
       color: var(--text);
+    }
+
+    header, main, section, footer {
+      width: 100%;
+      margin: 0;
+      padding: 0;
     }
 
     header {
@@ -33,21 +43,16 @@
       color: var(--primary);
     }
 
-      main {
-  padding: 60px 30px;
-  width: 100%;
-  max-width: none;
-  margin: 0;
-}
-
-section {
-  width: 100%;
-}
-
+    main {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
 
     section {
-      margin-bottom: 60px;
-
+      width: 100%;
+      padding: 60px 60px;
+      margin: 0;
     }
 
     h2 {
@@ -64,10 +69,12 @@ section {
 
     ul {
       list-style: none;
-      padding-left: 0;
+      padding: 0;
+      margin: 0;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 15px;
+      width: 100%;
     }
 
     ul li {
@@ -87,7 +94,7 @@ section {
       color: white;
       text-align: center;
       padding: 40px 20px;
-      margin-top: 80px;
+      margin: 0;
     }
   </style>
 </head>
@@ -96,63 +103,61 @@ section {
     <h1>Fakultas Peternakan - Universitas Seruni</h1>
   </header>
 
- <main>
-  <section>
-    <h2>Profil Fakultas</h2>
-    <p>Fakultas Peternakan Universitas Seruni yang berlokasi di Kampus Selatan, berdedikasi pada pengembangan ilmu dan teknologi peternakan yang mendukung ketahanan pangan nasional. Mahasiswa dididik untuk menguasai produksi, manajemen, genetika, nutrisi, dan kesehatan hewan secara komprehensif, serta berperan dalam inovasi agribisnis dan keberlanjutan sektor peternakan.</p>
-  </section>
+  <main>
+    <section>
+      <h2>Profil Fakultas</h2>
+      <p>Fakultas Peternakan Universitas Seruni yang berlokasi di Kampus Selatan, berdedikasi pada pengembangan ilmu dan teknologi peternakan yang mendukung ketahanan pangan nasional. Mahasiswa dididik untuk menguasai produksi, manajemen, genetika, nutrisi, dan kesehatan hewan secara komprehensif, serta berperan dalam inovasi agribisnis dan keberlanjutan sektor peternakan.</p>
+    </section>
 
-  <section>
-    <h2>Program Studi</h2>
+    <section>
+      <h2>Program Studi</h2>
 
-    <h3>Sarjana (S1)</h3>
-    <ul>
-      <li>Peternakan</li>
-      <li>Ilmu Ternak Unggas</li>
-      <li>Ilmu Ternak Ruminansia</li>
-      <li>Manajemen Produksi Ternak</li>
-      <li>Teknologi Pakan Ternak</li>
-      <li>Genetika dan Pemuliaan Ternak</li>
-      <li>Manajemen Kesehatan Ternak</li>
-      <li>Ilmu Nutrisi dan Pakan</li>
-      <li>Ilmu Reproduksi Ternak</li>
-      <li>Manajemen Agribisnis Peternakan</li>
-      <li>Teknologi Hasil Ternak</li>
-      <li>Bioteknologi Peternakan</li>
-      <li>Ekowisata Peternakan</li>
-      <li>Peternakan Berkelanjutan</li>
-      <li>Teknologi Produksi Susu dan Daging</li>
-      <li>Manajemen Peternakan Terpadu</li>
-      <li>Teknologi Lingkungan Peternakan</li>
-    </ul>
+      <h3>Sarjana (S1)</h3>
+      <ul>
+        <li>Peternakan</li>
+        <li>Ilmu Ternak Unggas</li>
+        <li>Ilmu Ternak Ruminansia</li>
+        <li>Manajemen Produksi Ternak</li>
+        <li>Teknologi Pakan Ternak</li>
+        <li>Genetika dan Pemuliaan Ternak</li>
+        <li>Manajemen Kesehatan Ternak</li>
+        <li>Ilmu Nutrisi dan Pakan</li>
+        <li>Ilmu Reproduksi Ternak</li>
+        <li>Manajemen Agribisnis Peternakan</li>
+        <li>Teknologi Hasil Ternak</li>
+        <li>Bioteknologi Peternakan</li>
+        <li>Ekowisata Peternakan</li>
+        <li>Peternakan Berkelanjutan</li>
+        <li>Teknologi Produksi Susu dan Daging</li>
+        <li>Manajemen Peternakan Terpadu</li>
+        <li>Teknologi Lingkungan Peternakan</li>
+      </ul>
 
-    <h3>Magister (S2)</h3>
-    <ul>
-      <li>Magister Ilmu Peternakan</li>
-      <li>Magister Manajemen Ternak Tropis</li>
-      <li>Magister Nutrisi dan Pakan Ternak</li>
-      <li>Magister Teknologi Produksi Ternak</li>
-      <li>Magister Teknologi Hasil Peternakan</li>
-      <li>Magister Bioteknologi Peternakan</li>
-      <li>Magister Agribisnis Peternakan</li>
-      <li>Magister Reproduksi dan Kesehatan Ternak</li>
-      <li>Magister Peternakan Berkelanjutan</li>
-      <li>Magister Manajemen dan Inovasi Peternakan</li>
-    </ul>
+      <h3>Magister (S2)</h3>
+      <ul>
+        <li>Magister Ilmu Peternakan</li>
+        <li>Magister Manajemen Ternak Tropis</li>
+        <li>Magister Nutrisi dan Pakan Ternak</li>
+        <li>Magister Teknologi Produksi Ternak</li>
+        <li>Magister Teknologi Hasil Peternakan</li>
+        <li>Magister Bioteknologi Peternakan</li>
+        <li>Magister Agribisnis Peternakan</li>
+        <li>Magister Reproduksi dan Kesehatan Ternak</li>
+        <li>Magister Peternakan Berkelanjutan</li>
+        <li>Magister Manajemen dan Inovasi Peternakan</li>
+      </ul>
 
-    <h3>Doktor (S3)</h3>
-    <ul>
-      <li>Doktor Ilmu Peternakan</li>
-      <li>Doktor Nutrisi dan Teknologi Pakan</li>
-      <li>Doktor Genetika dan Pemuliaan Ternak</li>
-      <li>Doktor Teknologi Produksi Ternak</li>
-      <li>Doktor Agribisnis Peternakan</li>
-      <li>Doktor Bioteknologi dan Reproduksi Hewan</li>
-      <li>Doktor Peternakan Berkelanjutan</li>
-    </ul>
-  </section>
-</main>
-
+      <h3>Doktor (S3)</h3>
+      <ul>
+        <li>Doktor Ilmu Peternakan</li>
+        <li>Doktor Nutrisi dan Teknologi Pakan</li>
+        <li>Doktor Genetika dan Pemuliaan Ternak</li>
+        <li>Doktor Teknologi Produksi Ternak</li>
+        <li>Doktor Agribisnis Peternakan</li>
+        <li>Doktor Bioteknologi dan Reproduksi Hewan</li>
+        <li>Doktor Peternakan Berkelanjutan</li>
+      </ul>
+    </section>
 
     <section class="facilities">
       <h2>Fasilitas Unggulan</h2>
