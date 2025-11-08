@@ -1,256 +1,244 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Universitas Seruni</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Inter', sans-serif;
-        }
-        body {
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        header {
-            background-color: #fff;
-            padding: 20px 40px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            display: flex; 
-            justify-content: space-between;
-            align-items: center;
-            position: relative;
-        }
-        header h1 {
-            font-size: 1.8em;
-            color: #2c3e50;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: #2c3e50;
-            font-weight: 500;
-        }
-        .hero {
-            background: url('https://images.unsplash.com/photo-1571260899304-425eee4c7efc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.6);
-        }
-        .hero h2 {
-            font-size: 3em;
-        }
-        main {
-            padding: 40px;
-            max-width: 1200px;
-            margin: auto;
-        }
-        section {
-            margin-bottom: 60px;
-        }
-        section h3 {
-            font-size: 2em;
-            color: #34495e;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 10px;
-        }
-        .faculty-list a {
-            display: block;
-            background-color: #fff;
-            padding: 20px;
-            margin-bottom: 15px;
-            text-decoration: none;
-            color: #2c3e50;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-        }
-        .faculty-list a:hover {
-            background-color: #ecf0f1;
-        }
-        footer {
-            background-color: #2c3e50;
-            color: #fff;
-            padding: 30px 40px;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        footer div {
-            margin-bottom: 20px;
-        }
-        footer h4 {
-            margin-bottom: 10px;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Universitas Seruni</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+body {
+  background-color: #f4f6fb;
+  color: #333;
+  overflow-x: hidden;
+}
+header {
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(10px);
+  padding: 20px 50px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+header h1 {
+  font-size: 1.8em;
+  color: #004aad;
+  font-weight: 700;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #1b3a57;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+nav ul li a:hover {
+  color: #004aad;
+}
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.menu-toggle span {
+  height: 3px;
+  background: #004aad;
+  margin: 4px 0;
+  width: 25px;
+}
 
-        /* Responsive Hamburger Menu */
-        .menu-toggle {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-        }
-        .menu-toggle span {
-            height: 3px;
-            background: #2c3e50;
-            margin: 4px 0;
-            width: 25px;
-            transition: 0.3s ease;
-        }
-        @media (max-width: 768px) {
-            nav ul {
-                display: none;
-                flex-direction: column;
-                gap: 15px;
-                background: #fff;
-                position: absolute;
-                top: 70px;
-                right: 40px;
-                padding: 20px;
-                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-                border-radius: 8px;
-                z-index: 99;
-            }
-            nav ul.active {
-                display: flex;
-            }
-            .menu-toggle {
-                display: flex;
-            }
-        }
-    </style>
+.hero {
+  background: url('https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.6);
+}
+.hero h2 {
+  font-size: 3rem;
+  letter-spacing: 1px;
+  animation: fadeIn 1.2s ease;
+}
+
+main {
+  padding: 60px 30px;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+section {
+  width: 100%;
+}
+
+
+
+section {
+  margin-bottom: 70px;
+}
+
+section h3 {
+  font-size: 2rem;
+  color: #004aad;
+  margin-bottom: 25px;
+  border-bottom: 3px solid #004aad20;
+  padding-bottom: 10px;
+  font-weight: 700;
+}
+
+.faculty-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+.faculty-list a {
+  background: #ffffff;
+  padding: 18px 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+  text-decoration: none;
+  color: #1b3a57;
+  transition: all 0.3s ease;
+}
+.faculty-list a:hover {
+  background: #004aad;
+  color: #fff;
+  transform: translateY(-4px);
+}
+
+/* Kartu lokasi */
+.kampus-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 25px;
+}
+.kampus-card {
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(8px);
+  border-radius: 15px;
+  padding: 25px;
+  border-left: 6px solid #004aad;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+.kampus-card:hover {
+  transform: translateY(-5px);
+  border-left-color: #1b3a57;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+.kampus-card h5 {
+  font-size: 1.2rem;
+  color: #004aad;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.kampus-card p {
+  line-height: 1.6;
+  color: #333;
+}
+iframe {
+  border-radius: 12px;
+  margin-top: 30px;
+}
+
+/* Footer */
+footer {
+  background: #1b3a57;
+  color: #ffffff;
+  padding: 40px 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+footer h4 {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+footer p {
+  line-height: 1.7;
+  color: #f4f6fb;
+}
+footer:last-of-type {
+  background: #0d1f33;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 25px;
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background: rgba(255,255,255,0.95);
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  }
+  nav ul.active {
+    display: flex;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+</style>
 </head>
 <body>
-    <header>
-        <h1>Universitas Seruni</h1>
-        <div class="menu-toggle" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#tentang">Tentang</a></li>
-                <li><a href="#berita">Berita</a></li>
-                <li><a href="#fakultas">Fakultas</a></li>
-                <li><a href="#kontak">Kontak</a></li>
-                <li><a href="#lokasi">Lokasi</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <div class="hero">
-        <h2>Selamat Datang di Universitas Seruni</h2>
-    </div>
-
-    <main>
-        <section id="tentang">
-    <h3>Tentang Universitas Seruni</h3>
-    <p>
-        <strong>Universitas Seruni</strong> merupakan salah satu institusi pendidikan tinggi terkemuka di Indonesia yang berkomitmen terhadap pengembangan ilmu pengetahuan, teknologi, seni, dan budaya. Berdiri pada tahun <strong>1970</strong>, Universitas Seruni awalnya hanya memiliki lima fakultas, yakni <em>Fakultas Hukum (FH)</em>, <em>Fakultas Ilmu Budaya (FIB)</em>, <em>Fakultas Teknik (FT)</em>, <em>Fakultas Kedokteran (FK)</em>, dan <em>Fakultas Ilmu Sosial dan Ilmu Politik (FISIP)</em>. 
-    </p>
-
-    <p>
-        Seiring berjalannya waktu dan meningkatnya kebutuhan masyarakat terhadap pendidikan tinggi multidisipliner, Universitas Seruni terus memperluas cakupan akademiknya melalui pendirian berbagai fakultas baru. Proses ini dilakukan secara bertahap dengan memperhatikan kebutuhan nasional, perkembangan riset, serta arah pembangunan sumber daya manusia di Indonesia.
-    </p>
-
-    <h4>Sejarah Perkembangan Fakultas</h4>
-    <p>
-        Perjalanan pengembangan Universitas Seruni dapat dibagi dalam beberapa fase penting sebagai berikut:
-    </p>
-
+<header>
+  <h1>Universitas Seruni</h1>
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+  <nav>
     <ul>
-        <li><strong>1970</strong> — Pendirian awal dengan lima fakultas: FH, FIB, FT, FK, dan FISIP.</li>
-        <li><strong>1977</strong> — Berdirinya <em>Fakultas Ekonomi dan Bisnis (FEB)</em> untuk memenuhi kebutuhan pendidikan ekonomi dan manajemen modern.</li>
-        <li><strong>1985</strong> — Pembentukan dua fakultas baru, yaitu <em>Fakultas Matematika dan Ilmu Pengetahuan Alam (FMIPA)</em> dan <em>Fakultas Ilmu Komputer (FASILKOM)</em>, menandai komitmen universitas terhadap pengembangan sains dan teknologi.</li>
-        <li><strong>1990</strong> — <em>Fakultas Ilmu Komunikasi (FIKOM)</em> resmi berdiri, keluar dari FISIP dan menjadi fakultas mandiri.</li>
-        <li><strong>1999</strong> — Diresmikan dua fakultas baru, yakni <em>Fakultas Psikologi (FPSI)</em> dan <em>Fakultas Seni Rupa dan Desain (FSRD)</em>.</li>
-        <li><strong>2000</strong> — <em>Fakultas Kedokteran</em> berubah nama menjadi <em>Fakultas Kedokteran, Kesehatan Masyarakat, dan Keperawatan (FK-KMK)</em> untuk mencakup bidang kesehatan yang lebih luas.</li>
-        <li><strong>2001</strong> — Berdirinya <em>Fakultas Keguruan dan Ilmu Pendidikan (FKIP)</em> dan <em>Pendidikan Vokasi (PV)</em> sebagai langkah penguatan pendidikan terapan dan pengembangan tenaga pendidik profesional.</li>
-        <li><strong>2005</strong> — Tiga fakultas baru hadir, yaitu <em>Fakultas Pertanian (FAPERTA)</em>, <em>Fakultas Peternakan (FAPET)</em>, dan <em>Fakultas Kehutanan (FHUT)</em>, yang memperluas cakupan keilmuan di bidang sumber daya alam.</li>
-        <li><strong>2008</strong> — <em>Fakultas Perikanan (FP)</em> dan <em>Fakultas Ilmu Kelautan (FIKEL)</em> diresmikan untuk mendukung pengembangan sektor maritim dan kelautan nasional.</li>
-        <li><strong>2010</strong> — Pemindahan beberapa fakultas ke <strong>Kampus Selatan Bogor</strong>, meliputi FAPERTA, FKIP, FSRD, FHUT, FP, FAPET, dan FIKEL, sebagai bagian dari ekspansi kampus untuk meningkatkan kapasitas pembelajaran dan penelitian.</li>
-        <li><strong>2012</strong> — <em>Pendidikan Vokasi</em> (PV) dipindahkan ke gedung baru yang lebih representatif dan modern.</li>
-        <li><strong>2013</strong> — <em>Fakultas Ilmu Administrasi (FIA)</em> resmi berdiri sebagai fakultas ke-19, memisahkan diri dari FISIP.</li>
-        <li><strong>2015</strong> — <em>Fakultas Kedokteran, Kesehatan Masyarakat, dan Keperawatan (FK-KMK)</em> menempati kompleks baru yang terintegrasi dengan <strong>Rumah Sakit Seruni</strong> sebagai pusat pendidikan, penelitian, dan pelayanan kesehatan.</li>
-        <li><strong>2019</strong> — Berdirinya <em>Fakultas Geografi dan Ilmu Kebumian (FGIK)</em> sebagai fakultas ke-20. Fakultas ini merupakan hasil pemisahan dari FMIPA dan penggabungan beberapa program studi dari FT (Teknik Geologi, Teknik Geofisika, Teknik Geodesi, Teknik Geomatika) serta program studi dari FMIPA (Geologi, Geofisika, Geomatika, Geodesi, Astronomi) dan FIKEL (Ilmu Kelautan, Oseanografi).</li>
+      <li><a href="#berita">Berita</a></li>
+      <li><a href="#tentang">Tentang</a></li>
+      <li><a href="#fakultas">Fakultas</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+      <li><a href="#lokasi">Lokasi</a></li>
     </ul>
+  </nav>
+</header>
 
-    <p>
-        Dengan perkembangan tersebut, Universitas Seruni kini memiliki total <strong>19 fakultas</strong> dan <strong>1 program pendidikan vokasi</strong>. Seluruh fakultas tersebar di tiga kampus utama—Kampus Utama Jakarta, Kampus Selatan Bogor, dan Kampus Kesehatan Jakarta—serta satu Kampus Vokasi terpisah. Struktur akademik yang luas dan multidisipliner ini menjadikan Universitas Seruni sebagai salah satu universitas paling komprehensif di Indonesia.
-    </p>
+<div class="hero">
+  <h2>Selamat Datang di Universitas Seruni</h2>
+</div>
 
-    <h4>Daftar Fakultas dan Program Pendidikan</h4>
-    <ul>
-        <li>Fakultas Hukum (FH)</li>
-        <li>Fakultas Ilmu Budaya (FIB)</li>
-        <li>Fakultas Teknik (FT)</li>
-        <li>Fakultas Kedokteran, Kesehatan Masyarakat, dan Keperawatan (FK-KMK)</li>
-        <li>Fakultas Ilmu Sosial dan Ilmu Politik (FISIP)</li>
-        <li>Fakultas Ekonomi dan Bisnis (FEB)</li>
-        <li>Fakultas Matematika dan Ilmu Pengetahuan Alam (FMIPA)</li>
-        <li>Fakultas Ilmu Komputer (FASILKOM)</li>
-        <li>Fakultas Ilmu Komunikasi (FIKOM)</li>
-        <li>Fakultas Psikologi (FPSI)</li>
-        <li>Fakultas Seni Rupa dan Desain (FSRD)</li>
-        <li>Fakultas Keguruan dan Ilmu Pendidikan (FKIP)</li>
-        <li>Pendidikan Vokasi (PV)</li>
-        <li>Fakultas Pertanian (FAPERTA)</li>
-        <li>Fakultas Peternakan (FAPET)</li>
-        <li>Fakultas Kehutanan (FHUT)</li>
-        <li>Fakultas Perikanan (FP)</li>
-        <li>Fakultas Ilmu Kelautan (FIKEL)</li>
-        <li>Fakultas Ilmu Administrasi (FIA)</li>
-        <li>Fakultas Geografi dan Ilmu Kebumian (FGIK)</li>
-    </ul>
-
-    <p>
-        Hingga kini, Universitas Seruni terus mengembangkan diri menjadi universitas riset berkelas dunia dengan semangat inovasi, kolaborasi lintas disiplin, serta pengabdian kepada masyarakat. Dengan visi mencetak generasi unggul dan berintegritas tinggi, Universitas Seruni berkomitmen untuk menjadi pelopor pendidikan tinggi yang adaptif terhadap perubahan zaman.
-    </p>
-</section>
-
-<style>
-    #tentang {
-        padding: 25px;
-        line-height: 1.7;
-        text-align: justify;
-    }
-
-    #tentang h3 {
-        margin-bottom: 15px;
-    }
-
-    #tentang h4 {
-        margin-top: 25px;
-        margin-bottom: 10px;
-    }
-
-    #tentang ul {
-        margin: 10px 0 20px 25px;
-    }
-
-    #tentang li {
-        margin-bottom: 5px;
-    }
-
-    #tentang p {
-        margin-bottom: 15px;
-    }
-</style>
-
-
-        <section id="berita">
+<main>
+            <section id="berita">
             <h3>Berita Terkini</h3>
             <ul>
                 <li><strong>7 Juni 2025:</strong> Universitas Seruni luncurkan Program Riset Interdisipliner Nasional.</li>
@@ -259,31 +247,320 @@
             </ul>
         </section>
 
-        <section id="fakultas">
-            <h3>Fakultas</h3>
-            <div class="faculty-list">
-                <a href="fakultas/teknik.html">Fakultas Teknik</a>
-                <a href="fakultas/ekonomi.html">Fakultas Ekonomi dan Bisnis</a>
-                <a href="fakultas/fib.html">Fakultas Ilmu Budaya</a>
-                <a href="fakultas/pertanian.html">Fakultas Pertanian</a>
-                <a href="fakultas/fh.html">Fakultas Hukum</a>
-                <a href="fakultas/fk.html">Fakultas Kedokteran, Kesehatan Masyarakat, dan Keperawatan</a>
-                <a href="fakultas/fkip.html">Fakultas Keguruan dan Ilmu Pendidikan</a>
-				<a href="fakultas/fisip.html">Fakultas Ilmu Sosial Dan Ilmu Politik</a>
-                <a href="fakultas/fia.html">Fakultas Ilmu Administrasi</a>
-                <a href="fakultas/fikom.html">Fakultas Ilmu Komunikasi</a>
-                <a href="fakultas/fsrd.html">Fakultas Seni Rupa Dan Desain</a>
-                <a href="fakultas/fpsi.html">Fakultas Psikologi</a>
-                <a href="fakultas/kehutanan.html">Fakultas Kehutanan</a>
-				<a href="fakultas/perikanan.html">Fakultas Perikanan</a>
-				<a href="fakultas/fapet.html">Fakultas Peternakan</a>
-				<a href="fakultas/fik.html">Fakultas Ilmu Kelautan</a>
-                <a href="fakultas/fasilkom.html">Fakultas Ilmu Komputer</a>
-		    <a href="fakultas/mipa.html">Fakultas Matematika Dan Ilmu Pengetahuan Alam</a>
-		     <a href="fakultas/fgik.html">Fakultas Geografi dan Ilmu Kebumian</a>
-                <a href="fakultas/vokasi.html">Pendidikan Vokasi</a>
-            </div>
-        </section>
+<section id="tentang">
+  <div class="tentang-container">
+    <h3>Tentang Universitas Seruni</h3>
+    <p>
+      <strong>Universitas Seruni</strong> adalah institusi pendidikan tinggi unggulan di Indonesia yang berkomitmen pada pengembangan ilmu pengetahuan, teknologi, seni, dan budaya untuk kemajuan bangsa. Berdiri pada tahun <strong>1970</strong>, Universitas Seruni memulai kiprahnya dengan lima fakultas pendiri, yaitu <em>Fakultas Hukum (FH)</em>, <em>Fakultas Ilmu Budaya (FIB)</em>, <em>Fakultas Teknik (FT)</em>, <em>Fakultas Kedokteran (FK)</em>, dan <em>Fakultas Ilmu Sosial dan Ilmu Politik (FISIP)</em>.
+    </p>
+
+    <p>
+      Sejak berdirinya, Universitas Seruni terus tumbuh menjadi universitas multidisiplin yang berdaya saing global. Melalui pengembangan fakultas dan program akademik yang berkelanjutan, universitas ini kini menaungi <strong>19 fakultas</strong> dan <strong>1 program pendidikan vokasi</strong>, menjadikannya salah satu universitas dengan cakupan akademik terluas di Indonesia.
+    </p>
+
+    <h4>Sejarah Perkembangan Fakultas</h4>
+    <ul class="timeline">
+      <li><span>1970</span> — Didirikan dengan lima fakultas awal: FH, FIB, FT, FK, dan FISIP.</li>
+      <li><span>1977</span> — Berdirinya Fakultas Ekonomi dan Bisnis (FEB).</li>
+      <li><span>1985</span> — Pendirian Fakultas Matematika dan Ilmu Pengetahuan Alam (FMIPA) dan Fakultas Ilmu Komputer (FASILKOM).</li>
+      <li><span>1990</span> — Fakultas Ilmu Komunikasi (FIKOM) resmi berdiri, keluar dari FISIP.</li>
+      <li><span>1999</span> — Fakultas Psikologi (FPSI) dan Fakultas Seni Rupa dan Desain (FSRD) dibentuk.</li>
+      <li><span>2000</span> — Fakultas Kedokteran berubah menjadi Fakultas Kedokteran, Kesehatan Masyarakat, dan Keperawatan (FK-KMK).</li>
+      <li><span>2001</span> — Pendirian Fakultas Keguruan dan Ilmu Pendidikan (FKIP) dan Pendidikan Vokasi (PV).</li>
+      <li><span>2005</span> — Hadirnya Fakultas Pertanian (FAPERTA), Fakultas Peternakan (FAPET), dan Fakultas Kehutanan (FHUT).</li>
+      <li><span>2008</span> — Fakultas Perikanan (FP) dan Fakultas Ilmu Kelautan (FIKEL) berdiri.</li>
+      <li><span>2010</span> — Pemindahan beberapa fakultas ke Kampus Selatan (Bogor).</li>
+      <li><span>2012</span> — Relokasi Pendidikan Vokasi ke kampus baru di Jakarta Timur.</li>
+      <li><span>2013</span> — Fakultas Ilmu Administrasi (FIA) resmi berdiri, memisahkan diri dari FISIP.</li>
+      <li><span>2015</span> — FK-KMK menempati kompleks baru yang terintegrasi dengan Rumah Sakit Seruni di Jakarta Pusat.</li>
+      <li><span>2019</span> — Fakultas Geografi dan Ilmu Kebumian (FGIK) berdiri sebagai fakultas ke-20.</li>
+    </ul>
+
+    <section id="fakultas">
+  <h3>Daftar Fakultas dan Akreditasi</h3>
+  <div class="faculty-grid">
+
+    <a href="fakultas/teknik.html" class="faculty-card">
+      <h4>Fakultas Teknik</h4>
+      <p>Akreditasi Internasional</p>
+    </a>
+
+    <a href="fakultas/ekonomi.html" class="faculty-card">
+      <h4>Fakultas Ekonomi dan Bisnis</h4>
+      <p>Akreditasi Internasional</p>
+    </a>
+
+    <a href="fakultas/fib.html" class="faculty-card">
+      <h4>Fakultas Ilmu Budaya</h4>
+      <p>Akreditasi Internasional</p>
+    </a>
+
+    <a href="fakultas/fh.html" class="faculty-card">
+      <h4>Fakultas Hukum</h4>
+      <p>Akreditasi Internasional</p>
+    </a>
+
+    <a href="fakultas/fisip.html" class="faculty-card">
+      <h4>Fakultas Ilmu Sosial dan Ilmu Politik</h4>
+      <p>Akreditasi Internasional</p>
+    </a>
+
+    <a href="fakultas/fia.html" class="faculty-card">
+      <h4>Fakultas Ilmu Administrasi</h4>
+      <p>Akreditasi Internasional</p>
+    </a>
+
+    <a href="fakultas/fikom.html" class="faculty-card">
+      <h4>Fakultas Ilmu Komunikasi</h4>
+      <p>Akreditasi Internasional</p>
+    </a>
+
+    <a href="fakultas/fpsi.html" class="faculty-card">
+      <h4>Fakultas Psikologi</h4>
+      <p>Akreditasi Internasional</p>
+    </a>
+
+    <a href="fakultas/fasilkom.html" class="faculty-card">
+      <h4>Fakultas Ilmu Komputer</h4>
+      <p>Akreditasi Internasional</p>
+    </a>
+
+    <a href="fakultas/mipa.html" class="faculty-card">
+      <h4>Fakultas Matematika dan Ilmu Pengetahuan Alam</h4>
+      <p>Akreditasi Internasional</p>
+    </a>
+
+    <a href="fakultas/fgik.html" class="faculty-card">
+      <h4>Fakultas Geografi dan Ilmu Kebumian</h4>
+      <p>Akreditasi Internasional</p>
+    </a>
+
+    <a href="fakultas/fk.html" class="faculty-card">
+      <h4>Fakultas Kedokteran, Kesehatan Masyarakat, dan Keperawatan</h4>
+      <p>Akreditasi Internasional</p>
+    </a>
+
+    <a href="fakultas/fsrd.html" class="faculty-card">
+      <h4>Fakultas Seni Rupa dan Desain</h4>
+      <p>Akreditasi Unggul</p>
+    </a>
+
+    <a href="fakultas/fkip.html" class="faculty-card">
+      <h4>Fakultas Keguruan dan Ilmu Pendidikan</h4>
+      <p>Akreditasi Unggul</p>
+    </a>
+
+    <a href="fakultas/pertanian.html" class="faculty-card">
+      <h4>Fakultas Pertanian</h4>
+      <p>Akreditasi Unggul</p>
+    </a>
+
+    <a href="fakultas/fapet.html" class="faculty-card">
+      <h4>Fakultas Peternakan</h4>
+      <p>Akreditasi Unggul</p>
+    </a>
+
+    <a href="fakultas/kehutanan.html" class="faculty-card">
+      <h4>Fakultas Kehutanan</h4>
+      <p>Akreditasi Unggul</p>
+    </a>
+
+    <a href="fakultas/perikanan.html" class="faculty-card">
+      <h4>Fakultas Perikanan</h4>
+      <p>Akreditasi Unggul</p>
+    </a>
+
+    <a href="fakultas/fik.html" class="faculty-card">
+      <h4>Fakultas Ilmu Kelautan</h4>
+      <p>Akreditasi Unggul</p>
+    </a>
+
+    <a href="fakultas/vokasi.html" class="faculty-card">
+      <h4>Pendidikan Vokasi</h4>
+      <p>Akreditasi Unggul</p>
+    </a>
+
+  </div>
+
+    <p class="akreditasi-info">
+      Secara institusional, <strong>Universitas Seruni</strong> telah meraih <em>Akreditasi Internasional</em> 
+      dan diakui oleh berbagai lembaga penjaminan mutu pendidikan tinggi dunia. Keunggulan akademik, fasilitas riset modern, dan jejaring kolaborasi global menjadikan Universitas Seruni sebagai pusat unggulan pendidikan tinggi di Indonesia dan Asia Tenggara.
+    </p>
+  </div>
+</section>
+
+<style>
+#tentang {
+  padding: 60px 30px;
+  background: linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  color: #2e2e2e;
+  line-height: 1.75;
+}
+
+#tentang h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  background: linear-gradient(90deg, #004aad, #1b3a57);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+#tentang h4 {
+  margin-top: 40px;
+  margin-bottom: 15px;
+  color: #1b3a57;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.timeline {
+  border-left: 3px solid #004aad;
+  padding-left: 20px;
+  margin: 15px 0 25px 20px;
+  position: relative;
+}
+
+.timeline li {
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 10px;
+}
+
+.timeline li::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  background: #004aad;
+  border-radius: 50%;
+}
+
+.timeline li span {
+  font-weight: 700;
+  color: #004aad;
+  margin-right: 6px;
+}
+
+.fakultas-grid {
+  margin: 15px 0 30px;
+}
+
+.fakultas-card {
+  background: #ffffff;
+  border: 1px solid #dce3eb;
+  border-radius: 12px;
+  padding: 25px 30px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.fakultas-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.fakultas-card ul {
+  columns: 2;
+  gap: 30px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.fakultas-card li {
+  margin-bottom: 10px;
+}
+
+.fakultas-card em {
+  color: #004aad;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.akreditasi-info {
+  margin-top: 35px;
+  background: #e9f3ff;
+  border-left: 6px solid #004aad;
+  padding: 20px 25px;
+  border-radius: 10px;
+  color: #2b2b2b;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  #tentang {
+    padding: 40px 20px;
+  }
+  .fakultas-card ul {
+    columns: 1;
+  }
+}
+
+ #fakultas {
+    background: linear-gradient(180deg, #f7faff 0%, #ffffff 100%);
+    padding: 60px 30px;
+  }
+
+  #fakultas h3 {
+    font-size: 2rem;
+    color: #003c8f;
+    text-align: center;
+    margin-bottom: 35px;
+  }
+
+  .faculty-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+  }
+
+  .faculty-card {
+    display: block;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px 20px;
+    text-decoration: none;
+    color: #2c3e50;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border-left: 6px solid #004aad;
+  }
+
+  .faculty-card:hover {
+    transform: translateY(-5px);
+    background: #f0f6ff;
+  }
+
+  .faculty-card h4 {
+    font-size: 1.15rem;
+    margin-bottom: 6px;
+    color: #004aad;
+  }
+
+  .faculty-card p {
+    font-size: 0.95rem;
+    color: #1b3a57;
+  }
+
+  .akreditasi-info {
+    margin-top: 40px;
+    background: #e9f3ff;
+    border-left: 6px solid #004aad;
+    padding: 20px 25px;
+    border-radius: 10px;
+    color: #2b2b2b;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    #fakultas {
+      padding: 40px 20px;
+    }
+  }
+</style>
 
         <section id="kontak">
             <h3>Kontak</h3>
@@ -291,50 +568,32 @@
         </section>
 
         <section id="lokasi">
-    <h3>Lokasi</h3>
+    <h3>Lokasi Kampus</h3>
+			
+    <div class="kampus-grid">
+      <div class="kampus-card">
+        <h5>Kampus Utama</h5>
+        <p><strong>Lokasi:</strong> Jl. Semeru Raya No. 99, Jakarta Selatan 12345, Jakarta, Indonesia</p>
+        <p><strong>Fakultas:</strong> FH, FIB, FT, FEB, FISIP, FIA, FIKOM, FPSI, FASILKOM, FMIPA, FGIK</p>
+      </div>
 
-    <div class="kampus">
-        <p><strong>Kampus Utama:</strong> Jl. Semeru Raya No. 99, Jakarta 12345</p>
-        <ul>
-            <li>Fakultas Teknik (FT)</li>
-            <li>Fakultas Ekonomi dan Bisnis (FEB)</li>
-            <li>Fakultas Ilmu Budaya (FIB)</li>
-            <li>Fakultas Hukum (FH)</li>
-            <li>Fakultas Ilmu Sosial dan Ilmu Politik (FISIP)</li>
-            <li>Fakultas Ilmu Administrasi(FIA)</li>
-            <li>Fakultas Ilmu Komunikasi (FIKOM)</li>
-            <li>Fakultas Psikologi (FPSI)</li>
-            <li>Fakultas Ilmu Komputer (FASILKOM)</li>
-            <li>Fakultas Matematika dan Ilmu Pengetahuan Alam (FMIPA)</li>
-            <li>Fakultas Geografi dan Ilmu Kebumian (FGIK)</li>
-        </ul>
-    </div>
+      <div class="kampus-card">
+        <h5>Kampus Selatan</h5>
+        <p><strong>Lokasi:</strong> Jl. Perjuangan Raya No. 39, Bogor Barat 14395 Bogor, Indonesia</p>
+        <p><strong>Fakultas:</strong> FAPERTA, FKIP, FSRD, FHUT, FP, FAPET, FIKEL</p>
+      </div>
 
-    <div class="kampus">
-        <p><strong>Kampus Selatan:</strong> Jl. Perjuangan Raya No. 39, Bogor 14395</p>
-        <ul>
-            <li>Fakultas Pertanian (FAPERTA)</li>
-            <li>Fakultas Keguruan dan Ilmu Pendidikan (FKIP)</li>
-            <li>Fakultas Seni Rupa dan Desain (FSRD)</li>
-            <li>Fakultas Kehutanan (FHUT)</li>
-            <li>Fakultas Perikanan (FP)</li>
-            <li>Fakultas Peternakan (FAPET)</li>
-            <li>Fakultas Ilmu Kelautan (FIKEL)</li>
-        </ul>
-    </div>
+      <div class="kampus-card">
+        <h5>Kampus Vokasi</h5>
+        <p><strong>Lokasi:</strong> Jl. Satria No. 13, Jakarta Timur 10345, Jakarta, Indonesia</p>
+        <p><strong>Fakultas:</strong> Pendidikan Vokasi (PV)</p>
+      </div>
 
-    <div class="kampus">
-        <p><strong>Kampus Kesehatan:</strong> Jl. Medika No. 139, Jakarta 11375</p>
-        <ul>
-            <li>Fakultas Kedokteran, Kesehatan Masyarakat, dan Keperawatan (FK-KMK)</li>
-        </ul>
-    </div>
-
-    <div class="kampus">
-        <p><strong>Kampus Vokasi:</strong> Jl. Satria No. 13, Jakarta 12345</p>
-        <ul>
-            <li>Pendidikan Vokasi (PV)</li>
-        </ul>
+      <div class="kampus-card">
+        <h5>Kampus Kesehatan</h5>
+        <p><strong>Lokasi:</strong> Jl. Medika No. 139, Jakarta Pusat 11375, Jakarta, Indonesia</p>
+        <p><strong>Fakultas:</strong> FK-KMK</p>
+      </div>
     </div>
 
     <iframe 
@@ -344,53 +603,55 @@
 </section>
 
 <style>
-    #lokasi {
-        padding: 20px;
-        line-height: 1.6;
-    }
+    .kampus-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
 
-    .kampus {
-        margin-bottom: 25px; /* jarak antar kampus */
-    }
+.kampus-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px 25px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  border-left: 6px solid #004aad;
+  transition: 0.3s;
+}
 
-    .kampus p {
-        margin: 5px 0;
-        font-weight: 500;
-    }
+.kampus-card:hover {
+  transform: translateY(-5px);
+  border-left-color: #1b3a57;
+}
 
-    .kampus ul {
-        margin: 8px 0 0 20px; /* jarak antara teks dan list */
-    }
-
-    .kampus li {
-        margin-bottom: 4px; /* jarak antar fakultas */
-    }
-
-    h3 {
-        margin-bottom: 15px;
-    }
+.kampus-card h5 {
+  margin-bottom: 8px;
+  font-size: 1.15rem;
+  color: #004aad;
+  font-weight: 600;
+}
 </style>
+</main>
 
-    </main>
+<footer>
+  <div>
+    <h4>Universitas Seruni</h4>
+    <p>Menjadi pusat pendidikan unggul dan inovatif untuk masa depan Indonesia.</p>
+  </div>
+  <div>
+    <h4>Ikuti Kami</h4>
+    <p>Instagram: @universitasseruni<br>Facebook: Universitas Seruni<br>Twitter: @UnivSeruni<br>Tiktok: @universitasseruni<br>Youtube: Universitas Seruni</p>
+  </div>
+</footer>
+<footer>
+  &copy; 2025 Universitas Seruni. Semua Hak Dilindungi.
+</footer>
 
-    <footer>
-        <div>
-            <h4>Universitas Seruni</h4>
-            <p>Menjadi pusat pendidikan unggul dan inovatif untuk masa depan Indonesia.</p>
-        </div>
-        <div>
-            <h4>Ikuti Kami</h4>
-            <p>Instagram: @universitasseruni<br>Facebook: Universitas Seruni<br>Twitter: @UnivSeruni<br>Tiktok: @universitasseruni<br>Youtube: Universitas Seruni</p>
-        </div>
-    </footer>
-    <footer>
-        &copy; 2025 Universitas Seruni. Semua Hak Dilindungi.
-    </footer>
+<script>
+function toggleMenu() {
+  document.querySelector('nav ul').classList.toggle('active');
+}
+</script>
 
-    <script>
-        function toggleMenu() {
-            document.querySelector('nav ul').classList.toggle('active');
-        }
-    </script>
 </body>
 </html>
