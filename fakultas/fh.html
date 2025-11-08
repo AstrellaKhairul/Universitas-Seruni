@@ -13,16 +13,24 @@
       --text: #2c3e50;
     }
 
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+
+    body {
       font-family: 'Inter', sans-serif;
       background-color: var(--bg);
       color: var(--text);
+      width: 100%;
+      overflow-x: hidden;
     }
 
     header {
+      width: 100%;
       background-color: #fff;
-      padding: 30px 50px;
+      padding: 30px 60px;
       box-shadow: 0 3px 6px rgba(0,0,0,0.05);
     }
 
@@ -31,25 +39,20 @@
       color: var(--primary);
     }
 
-   main {
-  padding: 60px 30px;
-  width: 100%;
-  max-width: none;
-  margin: 0;
-}
-
-section {
-  width: 100%;
-}
-
+    main {
+      width: 100%;
+      padding: 60px 60px;
+      margin: 0;
+    }
 
     section {
+      width: 100%;
       margin-bottom: 50px;
     }
 
     h2 {
-      font-size: 1.5em;
-      border-left: 5px solid var(--accent);
+      font-size: 1.6em;
+      border-left: 6px solid var(--accent);
       padding-left: 15px;
       margin-bottom: 20px;
     }
@@ -57,6 +60,12 @@ section {
     h3 {
       color: var(--accent);
       margin-top: 25px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      max-width: 100%;
+      line-height: 1.7;
     }
 
     ul {
@@ -67,7 +76,7 @@ section {
     ul li {
       background-color: #fff;
       margin-bottom: 10px;
-      padding: 12px 20px;
+      padding: 14px 20px;
       border-radius: 8px;
       box-shadow: 0 1px 4px rgba(0,0,0,0.04);
     }
@@ -78,11 +87,19 @@ section {
     }
 
     footer {
+      width: 100%;
       background-color: var(--primary);
       color: white;
       text-align: center;
-      padding: 30px;
+      padding: 30px 20px;
       margin-top: 60px;
+    }
+
+    /* Responsif */
+    @media (max-width: 768px) {
+      header, main {
+        padding: 25px 20px;
+      }
     }
   </style>
 </head>
