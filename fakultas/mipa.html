@@ -14,17 +14,24 @@
       --card: #ffffff;
     }
 
-    body {
+     * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+
+    body {
       font-family: 'Inter', sans-serif;
       background-color: var(--bg);
       color: var(--text);
+      overflow-x: hidden;
     }
 
     header {
       background-color: var(--card);
       padding: 40px 60px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      width: 100%;
     }
 
     header h1 {
@@ -33,7 +40,7 @@
       color: var(--primary);
     }
 
-       /* Bagian utama dibuat full width */
+    /* Bagian utama dibuat full width */
     main {
       width: 100%;
       max-width: none;
