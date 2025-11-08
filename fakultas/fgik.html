@@ -447,9 +447,35 @@ footer .small-print{
     }
 
 @media (max-width: 720px) {
-  html, body {
-    overflow-x: hidden;
+  nav.primary {
+    position: absolute;
+    top: 70px; 
+    left: 0;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    display: none;
+    box-shadow: 0 4px 14px rgba(15,23,36,0.08);
+    border-bottom: 1px solid rgba(15,23,36,0.05);
+    z-index: 999;
   }
+
+  nav.primary.show {
+    display: flex;
+  }
+
+  nav.primary a {
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 0;
+    font-size: 0.95rem;
+    color: var(--text);
+    border-top: 1px solid rgba(15,23,36,0.04);
+  }
+}
+
 
   .container {
     width: 100%;
