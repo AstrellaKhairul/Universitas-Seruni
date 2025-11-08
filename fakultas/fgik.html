@@ -1253,42 +1253,7 @@ footer .small-print{
     © 2025 Fakultas Geografi &amp; Ilmu Kebumian - Universitas Seruni
   </div>
 </footer>
- <script>
-    // Mobile menu fallback (simple)
-    function toggleMobileMenu(){
-      const nav = document.querySelector('nav.primary');
-      if(!nav) return;
-      if(window.getComputedStyle(nav).display === 'none'){
-        nav.style.display = 'flex';
-        nav.style.position = 'absolute';
-        nav.style.top = '74px';
-        nav.style.right = '18px';
-        nav.style.background = '#fff';
-        nav.style.padding = '14px';
-        nav.style.flexDirection = 'column';
-        nav.style.borderRadius = '10px';
-        nav.style.boxShadow = '0 8px 30px rgba(15,23,36,0.08)';
-      } else {
-        nav.style.display = 'none';
-      }
-    }
-
-    // Smooth scroll for anchors
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', function(e){
-        const href = this.getAttribute('href');
-        if(href.length>1){
-          e.preventDefault();
-          const el = document.querySelector(href);
-          if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
-          // close mobile menu if open
-          const nav = document.querySelector('nav.primary');
-          if(window.innerWidth < 720 && nav) nav.style.display = 'none';
-        }
-      })
-    });
-  </script>
-
+ 
   <script>
 function toggleMobileMenu() {
   const nav = document.querySelector("nav.primary");
