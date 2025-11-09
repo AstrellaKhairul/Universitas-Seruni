@@ -560,6 +560,17 @@ footer:last-of-type {
 }
 </style>
 
+	<script>
+// biar mouse wheel bisa scroll horizontal
+const container = document.querySelector('.berita-container');
+container.addEventListener('wheel', (e) => {
+  if (e.deltaY !== 0) {
+    e.preventDefault();
+    container.scrollLeft += e.deltaY;
+  }
+});
+</script>
+
 
 
 <section id="tentang">
