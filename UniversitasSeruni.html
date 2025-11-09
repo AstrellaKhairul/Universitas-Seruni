@@ -508,21 +508,20 @@ footer:last-of-type {
   padding-bottom: 10px;
 }
 
-/* SCROLL VERTICAL */
+/* SCROLL HORIZONTAL */
 .berita-container {
   display: flex;
-  flex-direction: column;
-  max-height: 600px;
-  overflow-y: auto;
+  flex-direction: row;
+  overflow-x: auto;
   gap: 20px;
-  scroll-snap-type: y mandatory;
-  padding-right: 10px;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
   scrollbar-width: thin;
   scrollbar-color: #004aad #e9f3ff;
 }
 
 .berita-container::-webkit-scrollbar {
-  width: 10px;
+  height: 10px;
 }
 .berita-container::-webkit-scrollbar-thumb {
   background-color: #004aad;
@@ -534,12 +533,13 @@ footer:last-of-type {
 }
 
 .berita-card {
+  flex: 0 0 380px;
   background: #ffffff;
   padding: 20px;
   border-radius: 15px;
   scroll-snap-align: start;
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-  border-left: 6px solid #004aad;
+  border-top: 6px solid #004aad;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .berita-card:hover {
@@ -559,7 +559,6 @@ footer:last-of-type {
   text-align: justify;
 }
 </style>
-
 
 
 
