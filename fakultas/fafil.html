@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fakultas Filsafat - Universitas Seruni</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2c3e50;
+      --accent: #d4ac0d;
+      --bg: #f8f9fa;
+      --text: #2f3542;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      padding: 50px 5vw;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      width: 100%;
+    }
+
+    header h1 {
+      font-size: 2.3em;
+      font-weight: 700;
+    }
+
+    main {
+      width: 100%;
+      padding: 60px 6vw;
+      background: var(--bg);
+    }
+
+    section {
+      width: 100%;
+      margin-bottom: 70px;
+    }
+
+    h2 {
+      font-size: 1.8em;
+      border-left: 6px solid var(--accent);
+      padding-left: 15px;
+      margin-bottom: 25px;
+      font-weight: 700;
+    }
+
+    h3 {
+      color: var(--accent);
+      margin-top: 25px;
+      margin-bottom: 10px;
+      font-size: 1.3em;
+    }
+
+    p {
+      margin-bottom: 15px;
+      font-size: 1.05em;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      background: white;
+      margin-bottom: 12px;
+      padding: 16px 24px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: all 0.2s ease-in-out;
+      width: 100%;
+    }
+
+    ul li:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .facilities li::before {
+      content: "📚";
+      margin-right: 10px;
+    }
+
+    .highlight {
+      background: linear-gradient(90deg, rgba(212,172,13,0.1), transparent);
+      border-left: 4px solid var(--accent);
+      padding: 18px 22px;
+      border-radius: 8px;
+      margin-bottom: 25px;
+    }
+
+    footer {
+      width: 100%;
+      background-color: var(--primary);
+      color: #ecf0f1;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.95em;
+      margin-top: 60px;
+    }
+
+    /* Responsif */
+    @media (max-width: 768px) {
+      header, main {
+        padding: 30px 5vw;
+      }
+      h1 {
+        font-size: 1.9em;
+      }
+      h2 {
+        font-size: 1.5em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Fakultas Filsafat - Universitas Seruni</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Profil Fakultas</h2>
+      <div class="highlight">
+        <p><strong>Berdiri pada 8 Maret 2025</strong>, Fakultas Filsafat Universitas Seruni (FAFIL UNSER) resmi menjadi fakultas mandiri setelah sebelumnya bernaung di bawah Fakultas Ilmu Budaya. 
+        Didirikan untuk memperkuat peran pemikiran kritis dan refleksi etis di lingkungan akademik, FAFIL menjadi wadah bagi pengembangan ilmu, kebijaksanaan, dan moralitas di tengah kemajuan teknologi dan masyarakat modern.</p>
+      </div>
+      <p>Fakultas Filsafat berkomitmen membentuk insan akademik yang berpikir mendalam, rasional, dan humanis. 
+      Melalui integrasi antara filsafat timur dan barat, fakultas ini menjadi pusat dialog ilmu pengetahuan, budaya, dan kemanusiaan yang melahirkan gagasan-gagasan baru demi kemajuan bangsa.</p>
+    </section>
+
+    <section>
+      <h2>Program Studi</h2>
+
+      <h3>Sarjana (S1)</h3>
+      <ul>
+        <li>Filsafat</li>
+        <li>Filsafat Etika dan Moral</li>
+        <li>Filsafat Ilmu dan Logika</li>
+        <li>Filsafat Agama dan Spiritualitas</li>
+        <li>Filsafat Politik dan Sosial</li>
+      </ul>
+
+      <h3>Magister (S2)</h3>
+      <ul>
+        <li>Magister Filsafat</li>
+        <li>Magister Etika Terapan</li>
+        <li>Magister Filsafat Kebudayaan</li>
+        <li>Magister Filsafat Ilmu dan Teknologi</li>
+      </ul>
+
+      <h3>Doktor (S3)</h3>
+      <ul>
+        <li>Doktor Filsafat</li>
+        <li>Doktor Filsafat Etika dan Spiritualitas</li>
+      </ul>
+    </section>
+
+    <section class="facilities">
+      <h2>Fasilitas</h2>
+      <ul>
+        <li>Pusat Kajian Etika dan Kemanusiaan</li>
+        <li>Perpustakaan Filsafat dan Pemikiran Global</li>
+        <li>Laboratorium Logika dan Filsafat Ilmu</li>
+        <li>Studio Dialog Filsafat dan Diskusi Publik</li>
+        <li>Ruang Seminar Refleksi dan Debat Akademik</li>
+        <li>Digital Humanities Lab</li>
+        <li>Taman Renung dan Galeri Pemikiran</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Kontak Fakultas</h2>
+      <p>
+        Email: <a href="mailto:fafil@seruni.ac.id">fafil@seruni.ac.id</a><br>
+        Telepon: (021) 4588-9923<br>
+        Lokasi: Gedung FAFIL, Kampus Utama Universitas Seruni, Jakarta Selatan
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Fakultas Filsafat - Universitas Seruni. Seluruh hak cipta dilindungi.
+  </footer>
+</body>
+</html>
