@@ -1,1 +1,192 @@
-tes
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fakultas Farmasi - Universitas Seruni</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2e4053;
+      --accent: #16a085;
+      --bg: #f9fafb;
+      --text: #2c3e50;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      padding: 40px 60px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 2.2em;
+      font-weight: 700;
+    }
+
+    main {
+      padding: 60px 60px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    h2 {
+      font-size: 1.8em;
+      border-left: 6px solid var(--accent);
+      padding-left: 15px;
+      margin-bottom: 25px;
+      font-weight: 700;
+    }
+
+    h3 {
+      color: var(--accent);
+      margin-top: 25px;
+      margin-bottom: 10px;
+      font-size: 1.3em;
+    }
+
+    p {
+      margin-bottom: 15px;
+      font-size: 1.05em;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      background: white;
+      margin-bottom: 10px;
+      padding: 14px 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: all 0.2s ease-in-out;
+    }
+
+    ul li:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    .facilities li::before {
+      content: "💊";
+      margin-right: 10px;
+    }
+
+    .highlight {
+      background: linear-gradient(90deg, rgba(22,160,133,0.1), transparent);
+      border-left: 4px solid var(--accent);
+      padding: 15px 20px;
+      border-radius: 8px;
+      margin-bottom: 25px;
+    }
+
+    footer {
+      background-color: var(--primary);
+      color: #ecf0f1;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.95em;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 768px) {
+      header, main {
+        padding: 25px 20px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Fakultas Farmasi - Universitas Seruni</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Profil Fakultas</h2>
+      <div class="highlight">
+        <p><strong>Berdiri pada 5 Februari 2025</strong>, Fakultas Farmasi Universitas Seruni (FF UNSER) resmi menjadi fakultas mandiri setelah sebelumnya berada di bawah Fakultas Kedokteran, Kesehatan Masyarakat, dan Keperawatan (FK-KMK). 
+        Berlokasi di kompleks kampus yang sama dengan FK-KMK, FF berkomitmen menjadi pusat unggulan pendidikan, riset, dan inovasi di bidang farmasi klinik, industri, dan bahan alam.</p>
+      </div>
+      <p>Dengan visi menjadi fakultas farmasi berkelas dunia yang berlandaskan inovasi, kemanusiaan, dan keberlanjutan, FF UNSER mengintegrasikan sains, teknologi, dan praktik klinis dalam pengajaran. 
+      Kolaborasi dengan rumah sakit, industri farmasi, dan lembaga riset nasional memperkuat posisi FF sebagai motor penggerak kesehatan masyarakat berbasis ilmu pengetahuan.</p>
+    </section>
+
+    <section>
+      <h2>Program Studi</h2>
+
+      <h3>Sarjana (S1)</h3>
+      <ul>
+        <li>Farmasi</li>
+        <li>Farmasi Klinis dan Komunitas</li>
+        <li>Farmasi Industri</li>
+        <li>Farmasi Herbal dan Fitofarmaka</li>
+        <li>Farmasi Bahan Alam dan Bioteknologi</li>
+      </ul>
+
+      <h3>Magister (S2)</h3>
+      <ul>
+        <li>Magister Ilmu Farmasi</li>
+        <li>Magister Farmasi Klinis</li>
+        <li>Magister Farmasi Industri</li>
+        <li>Magister Teknologi Farmasi dan Obat Tradisional</li>
+      </ul>
+
+      <h3>Doktor (S3)</h3>
+      <ul>
+        <li>Doktor Ilmu Farmasi</li>
+        <li>Doktor Teknologi Farmasi dan Kesehatan Molekuler</li>
+      </ul>
+    </section>
+
+    <section class="facilities">
+      <h2>Fasilitas</h2>
+      <ul>
+        <li>Laboratorium Kimia Farmasi dan Analisis Obat</li>
+        <li>Laboratorium Teknologi Farmasi & Bioteknologi</li>
+        <li>Laboratorium Farmasi Klinik & Komunitas</li>
+        <li>Pusat Riset Herbal dan Obat Tradisional</li>
+        <li>Teaching Pharmacy (Apotek Edukasi)</li>
+        <li>Studio Pembelajaran Digital & VR Lab</li>
+        <li>Perpustakaan Farmasi Terpadu</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Kontak Fakultas</h2>
+      <p>
+        Email: <a href="mailto:farmasi@seruni.ac.id">farmasi@seruni.ac.id</a><br>
+        Telepon: (021) 4578-9922<br>
+        Lokasi: Kompleks FK-KMK, Kampus Pusat Universitas Seruni, Jakarta Pusat
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Fakultas Farmasi - Universitas Seruni. Seluruh hak cipta dilindungi.
+  </footer>
+</body>
+</html>
