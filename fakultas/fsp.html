@@ -1,1 +1,209 @@
-Fakultas Seni Pertunjukan
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fakultas Seni Pertunjukan - Universitas Seruni</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #6a1b9a;
+      --accent: #ff4081;
+      --bg: #faf8fb;
+      --text: #2c2c2c;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    header {
+      width: 100%;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      padding: 60px 5vw;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 2.4em;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    main {
+      width: 100%;
+      padding: 70px 6vw;
+      background: var(--bg);
+    }
+
+    section {
+      width: 100%;
+      margin-bottom: 70px;
+    }
+
+    h2 {
+      font-size: 1.9em;
+      border-left: 6px solid var(--accent);
+      padding-left: 15px;
+      margin-bottom: 25px;
+      font-weight: 700;
+    }
+
+    h3 {
+      color: var(--accent);
+      margin-top: 25px;
+      margin-bottom: 10px;
+      font-size: 1.3em;
+    }
+
+    p {
+      margin-bottom: 15px;
+      font-size: 1.05em;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      background: white;
+      margin-bottom: 12px;
+      padding: 18px 24px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      transition: all 0.2s ease-in-out;
+      width: 100%;
+    }
+
+    ul li:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .facilities li::before {
+      content: "🎭";
+      margin-right: 10px;
+    }
+
+    .highlight {
+      background: linear-gradient(90deg, rgba(255,64,129,0.1), transparent);
+      border-left: 4px solid var(--accent);
+      padding: 20px 24px;
+      border-radius: 8px;
+      margin-bottom: 25px;
+    }
+
+    footer {
+      width: 100%;
+      background-color: var(--primary);
+      color: #ecf0f1;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.95em;
+      margin-top: 60px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsif */
+    @media (max-width: 768px) {
+      header, main {
+        padding: 30px 5vw;
+      }
+      h1 {
+        font-size: 2em;
+      }
+      h2 {
+        font-size: 1.5em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Fakultas Seni Pertunjukan - Universitas Seruni</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Profil Fakultas</h2>
+      <div class="highlight">
+        <p><strong>Berdiri pada 20 Mei 2025</strong>, Fakultas Seni Pertunjukan Universitas Seruni (FSP UNSER) hadir sebagai pusat kreativitas dan ekspresi artistik yang memadukan seni tradisi dengan teknologi modern.</p>
+      </div>
+      <p>FSP berkomitmen mengembangkan seni pertunjukan Indonesia ke ranah global melalui pendidikan, riset, dan kolaborasi lintas disiplin. Fakultas ini menjadi ruang bagi mahasiswa untuk mengeksplorasi dunia teater, tari, musik, dan produksi kreatif dengan pendekatan profesional dan inovatif.</p>
+      <p>Dengan dukungan studio seni berteknologi tinggi, panggung pertunjukan modern, serta dosen dan praktisi ternama, FSP UNSER membentuk generasi seniman yang kreatif, kritis, dan berdampak sosial.</p>
+    </section>
+
+    <section>
+      <h2>Program Studi</h2>
+
+      <h3>Sarjana (S1)</h3>
+      <ul>
+        <li>Teater dan Seni Drama</li>
+        <li>Tari dan Koreografi</li>
+        <li>Musik dan Produksi Suara</li>
+        <li>Manajemen Seni Pertunjukan</li>
+        <li>Teknologi Panggung dan Produksi Pertunjukan</li>
+      </ul>
+
+      <h3>Magister (S2)</h3>
+      <ul>
+        <li>Magister Seni Pertunjukan</li>
+        <li>Magister Kajian Budaya dan Estetika</li>
+      </ul>
+
+      <h3>Doktor (S3)</h3>
+      <ul>
+        <li>Doktor Seni Pertunjukan dan Inovasi Kreatif</li>
+      </ul>
+    </section>
+
+    <section class="facilities">
+      <h2>Fasilitas</h2>
+      <ul>
+        <li>Gedung Teater Seruni (Main Hall & Studio Black Box)</li>
+        <li>Studio Musik & Rekaman Digital</li>
+        <li>Laboratorium Tari dan Koreografi</li>
+        <li>Studio Produksi Multimedia Pertunjukan</li>
+        <li>Pusat Kajian Estetika dan Seni Nusantara</li>
+        <li>Ruang Kostum dan Tata Rias Panggung</li>
+        <li>Digital Performance Lab</li>
+        <li>Seruni Performing Arts Gallery</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Kontak Fakultas</h2>
+      <p>
+        Email: <a href="mailto:fsp@seruni.ac.id">fsp@seruni.ac.id</a><br>
+        Telepon: (021) 4588-9927<br>
+        Lokasi: Gedung FSP, Kampus Selatan Universitas Seruni
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Fakultas Seni Pertunjukan - Universitas Seruni. Seluruh hak cipta dilindungi.
+  </footer>
+</body>
+</html>
+
