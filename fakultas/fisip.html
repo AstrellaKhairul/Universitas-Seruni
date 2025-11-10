@@ -67,7 +67,7 @@
     margin: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 10px;
+    gap: 15px;
     width: 100%;
   }
 
@@ -77,11 +77,21 @@
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     box-sizing: border-box;
+    line-height: 1.6;
   }
 
-  .facilities li::before {
-    content: '🌍';
-    margin-right: 10px;
+  .facilities li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .facilities li span.icon {
+    font-size: 1.5em;
+  }
+
+  .facilities li div {
+    flex: 1;
   }
 
   footer {
@@ -94,12 +104,10 @@
     box-sizing: border-box;
   }
 
-  /* pastikan semua elemen benar-benar full */
   html, body, header, main, section, footer, ul, li {
     max-width: 100%;
   }
 
-  /* hapus ruang putih di kanan-kiri layar */
   * {
     margin-left: 0;
     margin-right: 0;
@@ -115,6 +123,82 @@
     <section>
       <h2>Profil Fakultas</h2>
       <p>Fakultas Ilmu Sosial dan Ilmu Politik (FISIP) Universitas Seruni adalah rumah bagi berbagai ilmu sosial yang mempelajari masyarakat, kebijakan, dan dinamika politik. Dengan pendekatan multidisipliner dan integratif, FISIP mencetak lulusan yang kritis, analitis, dan siap menghadapi tantangan global.</p>
+    </section>
+
+    <section>
+      <h2>Fasilitas</h2>
+      <ul class="facilities">
+        <li>
+          <span class="icon">🏛️</span>
+          <div>
+            <strong>Gedung FISIP Modern</strong><br>
+            Ruang belajar luas, nyaman, dan dilengkapi sistem pendingin serta aksesibilitas ramah difabel.
+          </div>
+        </li>
+        <li>
+          <span class="icon">💻</span>
+          <div>
+            <strong>Laboratorium Komputer & Data Sosial</strong><br>
+            Fasilitas modern untuk analisis data sosial, statistik kebijakan, dan pemodelan politik digital.
+          </div>
+        </li>
+        <li>
+          <span class="icon">📚</span>
+          <div>
+            <strong>Perpustakaan Sosial & Politik</strong><br>
+            Koleksi lengkap buku, jurnal ilmiah, dan database internasional dalam bidang sosial-politik dan kebijakan publik.
+          </div>
+        </li>
+        <li>
+          <span class="icon">🎙️</span>
+          <div>
+            <strong>Studio Media dan Komunikasi</strong><br>
+            Dilengkapi peralatan siaran, produksi video, dan riset komunikasi digital untuk mahasiswa dan peneliti.
+          </div>
+        </li>
+        <li>
+          <span class="icon">🌳</span>
+          <div>
+            <strong>Ruang Terbuka & Area Diskusi</strong><br>
+            Area hijau yang mendukung interaksi sosial dan kolaborasi antar mahasiswa lintas program studi.
+          </div>
+        </li>
+        <li>
+          <span class="icon">🏫</span>
+          <div>
+            <strong>Auditorium Seruni FISIP</strong><br>
+            Tempat pelaksanaan seminar, konferensi, dan kegiatan akademik skala nasional maupun internasional.
+          </div>
+        </li>
+        <li>
+          <span class="icon">☕</span>
+          <div>
+            <strong>Seruni Corner & Lounge</strong><br>
+            Ruang santai mahasiswa yang dilengkapi Wi-Fi, meja diskusi, dan area kreatif untuk brainstorming ide sosial.
+          </div>
+        </li>
+        <li>
+          <span class="icon">🔬</span>
+          <div>
+            <strong>Pusat Riset Sosial dan Kebijakan Publik</strong><br>
+            Fasilitas riset kolaboratif yang fokus pada penelitian sosial, demokrasi, dan pembangunan berkelanjutan.
+          </div>
+        </li>
+        <li>
+          <span class="icon">🌐</span>
+          <div>
+            <strong>Laboratorium Hubungan Internasional</strong><br>
+            Simulasi diplomasi, forum negosiasi, dan analisis isu global yang mempersiapkan mahasiswa menghadapi dunia internasional.
+          </div>
+        </li>
+        <li>
+          <span class="icon">📡</span>
+          <div>
+            <strong>Fasilitas Digital Learning</strong><br>
+            Sistem pembelajaran hybrid dengan dukungan e-learning, server cloud, dan konektivitas berkecepatan tinggi.
+          </div>
+        </li>
+      </ul>
     </section>
 
      <section>
