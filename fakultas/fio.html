@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fakultas Ilmu Olahraga - Universitas Seruni</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0056b3;
+      --accent: #ff9800;
+      --bg: #f9fafc;
+      --text: #222;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    header {
+      width: 100%;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      padding: 60px 5vw;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 2.4em;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    main {
+      width: 100%;
+      padding: 70px 6vw;
+      background: var(--bg);
+    }
+
+    section {
+      width: 100%;
+      margin-bottom: 70px;
+    }
+
+    h2 {
+      font-size: 1.9em;
+      border-left: 6px solid var(--accent);
+      padding-left: 15px;
+      margin-bottom: 25px;
+      font-weight: 700;
+    }
+
+    h3 {
+      color: var(--accent);
+      margin-top: 25px;
+      margin-bottom: 10px;
+      font-size: 1.3em;
+    }
+
+    p {
+      margin-bottom: 15px;
+      font-size: 1.05em;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      background: white;
+      margin-bottom: 12px;
+      padding: 18px 24px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      transition: all 0.2s ease-in-out;
+      width: 100%;
+    }
+
+    ul li:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .facilities li::before {
+      content: "🏟️";
+      margin-right: 10px;
+    }
+
+    .highlight {
+      background: linear-gradient(90deg, rgba(255,152,0,0.1), transparent);
+      border-left: 4px solid var(--accent);
+      padding: 20px 24px;
+      border-radius: 8px;
+      margin-bottom: 25px;
+    }
+
+    footer {
+      width: 100%;
+      background-color: var(--primary);
+      color: #ecf0f1;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.95em;
+      margin-top: 60px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsif */
+    @media (max-width: 768px) {
+      header, main {
+        padding: 30px 5vw;
+      }
+      h1 {
+        font-size: 2em;
+      }
+      h2 {
+        font-size: 1.5em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Fakultas Ilmu Olahraga - Universitas Seruni</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Profil Fakultas</h2>
+      <div class="highlight">
+        <p><strong>Berdiri pada 4 April 2025</strong>, Fakultas Ilmu Olahraga Universitas Seruni (FIO UNSER) resmi dibentuk untuk menjawab kebutuhan akan pengembangan ilmu keolahragaan, kebugaran, dan kesehatan masyarakat berbasis sains dan teknologi.</p>
+      </div>
+      <p>FIO menjadi pusat keunggulan dalam pengembangan riset dan praktik olahraga di Indonesia. Fakultas ini berkomitmen mencetak lulusan yang memiliki keunggulan dalam performa fisik, manajemen olahraga, fisiologi, dan pendidikan jasmani.</p>
+      <p>Dengan dukungan laboratorium modern, dosen ahli, dan fasilitas olahraga bertaraf nasional, FIO berperan aktif dalam mencetak atlet, pelatih, dan ilmuwan olahraga masa depan.</p>
+    </section>
+
+    <section>
+      <h2>Program Studi</h2>
+
+      <h3>Sarjana (S1)</h3>
+      <ul>
+        <li>Ilmu Keolahragaan</li>
+        <li>Manajemen Olahraga</li>
+        <li>Kepelatihan Olahraga</li>
+        <li>Fisioterapi Olahraga</li>
+      </ul>
+
+      <h3>Magister (S2)</h3>
+      <ul>
+        <li>Magister Ilmu Keolahragaan</li>
+        <li>Magister Manajemen Olahraga</li>
+      </ul>
+
+      <h3>Doktor (S3)</h3>
+      <ul>
+        <li>Doktor Ilmu Keolahragaan</li>
+      </ul>
+    </section>
+
+    <section class="facilities">
+      <h2>Fasilitas</h2>
+      <ul>
+        <li>Stadion Seruni Arena</li>
+        <li>Sport Science Laboratory</li>
+        <li>Fitness & Performance Center</li>
+        <li>Lapangan Multifungsi (Indoor & Outdoor)</li>
+        <li>Pusat Rehabilitasi dan Fisioterapi Olahraga</li>
+        <li>Kolam Renang Seruni Aquatic Center</li>
+        <li>Studio Kinesiologi & Biomekanika</li>
+        <li>Digital Sport Analytics Hub</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Kontak Fakultas</h2>
+      <p>
+        Email: <a href="mailto:fio@seruni.ac.id">fio@seruni.ac.id</a><br>
+        Telepon: (021) 4588-9925<br>
+        Lokasi: Gedung FIO, Kampus Utama Universitas Seruni, Jakarta Selatan
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Fakultas Ilmu Olahraga - Universitas Seruni. Seluruh hak cipta dilindungi.
+  </footer>
+</body>
+</html>
