@@ -5,94 +5,126 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fakultas Ekonomi dan Bisnis - Universitas Seruni</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <style>
+ <style>
     :root {
-      --primary: #003366;
-      --accent: #f4b400;
-      --bg: #fefefe;
-      --text: #222222;
-      --card: #ffffff;
+      --primary: #2e4053;
+      --accent: #16a085;
+      --bg: #f9fafb;
+      --text: #2c3e50;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      margin: 0;
       font-family: 'Inter', sans-serif;
       background-color: var(--bg);
       color: var(--text);
-      width: 100%;
+      line-height: 1.6;
       overflow-x: hidden;
     }
 
     header {
-      background-color: var(--card);
-      padding: 40px 50px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      padding: 50px 5vw;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
       width: 100%;
     }
 
     header h1 {
-      margin: 0;
-      font-size: 2.4em;
-      color: var(--primary);
+      font-size: 2.3em;
+      font-weight: 700;
     }
 
     main {
       width: 100%;
-      margin: 0;
-      padding: 60px 50px;
-      box-sizing: border-box;
+      padding: 60px 6vw;
+      background: var(--bg);
     }
 
     section {
       width: 100%;
-      margin-bottom: 60px;
-      box-sizing: border-box;
+      margin-bottom: 70px;
     }
 
     h2 {
-      font-size: 1.9em;
-      margin-bottom: 20px;
+      font-size: 1.8em;
       border-left: 6px solid var(--accent);
       padding-left: 15px;
+      margin-bottom: 25px;
+      font-weight: 700;
     }
 
     h3 {
-      margin-top: 30px;
       color: var(--accent);
+      margin-top: 25px;
+      margin-bottom: 10px;
+      font-size: 1.3em;
+    }
+
+    p {
+      margin-bottom: 15px;
+      font-size: 1.05em;
     }
 
     ul {
       list-style: none;
       padding-left: 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 16px;
     }
 
     ul li {
-      background-color: var(--card);
-      padding: 18px 20px;
-      border-radius: 12px;
+      background: white;
+      margin-bottom: 12px;
+      padding: 16px 24px;
+      border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: all 0.2s ease-in-out;
+      width: 100%;
+    }
+
+    ul li:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
 
     .facilities li::before {
-      content: '💼';
+      content: "💊";
       margin-right: 10px;
     }
 
-    footer {
-      background-color: var(--text);
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
-      width: 100%;
-      margin-top: 80px;
+    .highlight {
+      background: linear-gradient(90deg, rgba(22,160,133,0.1), transparent);
+      border-left: 4px solid var(--accent);
+      padding: 18px 22px;
+      border-radius: 8px;
+      margin-bottom: 25px;
     }
 
-    /* biar semua elemen full width dan rapi */
-    header, main, section, footer {
-      max-width: 100%;
+    footer {
+      width: 100%;
+      background-color: var(--primary);
+      color: #ecf0f1;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.95em;
+      margin-top: 60px;
+    }
+
+    /* Responsif */
+    @media (max-width: 768px) {
+      header, main {
+        padding: 30px 5vw;
+      }
+      h1 {
+        font-size: 1.9em;
+      }
+      h2 {
+        font-size: 1.5em;
+      }
     }
   </style>
 </head>
